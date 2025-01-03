@@ -26,13 +26,13 @@ namespace ejercicioTelegrama
             //Leo el telegrama
             textoTelegrama = txtTelegrama.Text;
             // telegrama urgente?
-            if (chkUrgente.Checked)
-            {
-                tipoTelegrama = 'u';
-            }
-            else
+            if (rbOrdinario.Checked)
             {
                 tipoTelegrama = 'o';
+            }
+            else if(rbUrgente.Checked)
+            {
+                tipoTelegrama = 'u';
             }
             //Obtengo el número de palabras que forma el telegrama
             string[] palabras = textoTelegrama.Split(' ');
